@@ -76,22 +76,6 @@ See the [scripting documentation](https://github.com/bluerobotics/br-equipment-c
 
 ---
 
-## Device Firmware
-
-| Device | Repository |
-|:------:|:----------:|
-| **Pressboi** | [bluerobotics/pressboi](https://github.com/bluerobotics/pressboi) |
-| **Fillhead** | [bluerobotics/fillhead](https://github.com/bluerobotics/fillhead) |
-| **Gantry** | [bluerobotics/gantry](https://github.com/bluerobotics/gantry) |
-
----
-
-## Contributing
-
-Feel free to submit your own production scripts via pull request!
-
----
-
 <div align="center">
 
 Made with 💙 by the Blue Robotics team
