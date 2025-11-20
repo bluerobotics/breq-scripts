@@ -14,18 +14,9 @@
 
 Collection of `.breq` (BR Equipment) automation scripts for controlling Blue Robotics manufacturing equipment. These scripts coordinate multiple devices for production tasks like assembly, testing, and quality control.
 
+Scripts are organized by device folder (e.g., `pressboi/`, `fillhead/`, `gantry/`).
+
 **Used with:** [BR Equipment Control App](https://github.com/bluerobotics/br-equipment-control-app)
-
----
-
-## Available Scripts
-
-| Device | Script | Description |
-|:------:|:------:|:------------|
-| **Pressboi** | `pressboi.breq` | Press control sequences |
-| **Fillhead** | `t500-rotor.breq` | T500 rotor encapsulation |
-| **Fillhead** | `t500-stator.breq` | T500 stator encapsulation |
-| **Gantry** | `gantry_motion_test.breq` | Motion testing and calibration |
 
 ---
 
