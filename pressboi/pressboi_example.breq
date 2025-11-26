@@ -16,6 +16,7 @@ queue_for_logging pressboi.current_pos pressboi.force_load_cell
 start_logging "<date> <time> <op> <job> <serial> t200 press" pressboi
 
 # these three absolute move commands are an example of a press routine with three phases
+# there are only one supported unit for each parameter, right-click a command in the device manager for more info
 pressboi.move_abs 122 mm 20 mm/s 2 kg abort action        # approach move
 pressboi.move_abs 124 mm 5 mm/s 20 kg abort action        # alignment move       
 pressboi.move_abs 130 mm 2 mm/s 500 kg retract action     # press move                       
