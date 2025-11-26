@@ -1,11 +1,11 @@
 ### pressboi example ###
 
-# pressboi homes automatically at boot, but that can be persistently set using pressboi.home_on_boot
-pressboi.home
+# pressboi homes automatically at boot, but that can be persistently set using pressboi.home_on_boot and will save through power cycles
+# if you turn off automatic homing at boot, you'll need to run pressboi.home before making moves
+# editor tip - shift+scrollwheel to scroll left and right
 
 # the default retract position for pressboi is 0mm, this can be persistently set using pressboi.set_retract
 pressboi.set_retract 100 mm 25 mm/s
-
 # this moves pressboi to the retract position.  typically, you'd want this at the start of every script
 pressboi.retract
 
@@ -22,12 +22,12 @@ pressboi.move_abs 124 mm 5 mm/s 20 kg abort action        # alignment move
 pressboi.move_abs 130 mm 2 mm/s 500 kg retract action     # press move                       
 
 # throw a warning if the press endpoint is outside the defined range - in this example, it will be
-if pressboi.endpoint < 123 throw pressboi.endpoint_warning
-if pressboi.endpoint > 124 throw pressboi.endpoint_warning
+if pressboi.endpoint < 129 throw pressboi.endpoint_warning
+if pressboi.endpoint > 131 throw pressboi.endpoint_warning
 
 # throw a warning if the press energy is outside the defined range - in this example, it likely will be
-if pressboi.joules < 1.5 throw pressboi.energy_warning
-if pressboi.joules > 3 throw pressboi.energy_warning
+#if pressboi.joules < 1.5 throw pressboi.energy_warning
+#if pressboi.joules > 3 throw pressboi.energy_warning
 
 # stop logging
 stop_logging
