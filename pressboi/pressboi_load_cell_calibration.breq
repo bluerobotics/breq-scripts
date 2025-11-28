@@ -1,0 +1,19 @@
+pressboi.set_force_zero
+pressboi.set_retract 219 mm 25 mm/s
+pressboi.retract  
+
+queue_for_logging
+	pressboi.current_pos
+	pressboi.force_load_cell
+	pressboi.joules
+start_logging "<date> <time> <op> <job> <serial>" pressboi
+
+pressboi.move_abs 230 mm 0.1 mm/s 1000 kg trigger retract action   
+
+stop_logging
+
+pressboi.generate_press_report open
+
+wait 1000
+# COPY THE STRAIN CAL COMMAND FROM THE REPORT AND REPLACE THE BELOW COMMAND, THEN RUN IT
+pressboi.set_strain_cal -1495.8485 3793.8739 -2352.0141 848.7216 -28.9240

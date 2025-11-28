@@ -1,0 +1,24 @@
+
+pressboi.set_retract 100 mm 25 mm/s
+pressboi.retract  
+
+queue_for_logging
+	pressboi.current_pos
+	pressboi.force_load_cell
+	pressboi.joules
+start_logging "<date> <time> <op> <job> <serial>" pressboi
+
+pressboi.move_abs 124 mm 10 mm/s 10 kg trigger abort action  
+
+pressboi.move_abs 136 mm 0.5 mm/s 500 kg trigger retract action  
+
+stop_logging
+
+pressboi.generate_press_report
+	400 kg force_min
+	600 kg force_max
+	132 mm endpoint_min
+	136 mm endpoint_max
+	1 J energy_min
+	1.5 J energy_max
+	open
