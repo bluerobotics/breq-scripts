@@ -1,0 +1,9 @@
+### Shut down machine ###
+
+fillhead.vacuum_off 
+fillhead.heater_off
+
+fillhead.home 
+
+fillhead.pinch_valve_open vacuum
+fillhead.pinch_valve_open injector

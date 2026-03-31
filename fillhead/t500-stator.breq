@@ -1,23 +1,12 @@
 ### T500 STATOR ###
 
-#This takes a while, start early
-fillhead.heater_on 70 C 
-
-fillhead.home 
-
-fillhead.pinch_valve_home vacuum, fillhead.pinch_valve_home injector
-
-fillhead.set_force_zero 
-fillhead.cartridge_home
 
 fillhead.pinch_valve_close injector
    
-#fillhead.vacuum_on -5
-#fillhead.pinch_valve_home vacuum
 fillhead.pinch_valve_open vacuum
 
-wait 5 sec
-#fillhead.pinch_valve_close vacuum
+#wait 5 sec
+
 fillhead.set_leak_test_delta 0.5 psi
 fillhead.set_leak_test_duration_s 20 sec
 fillhead.set_leak_test_target -13
@@ -37,36 +26,8 @@ WAIT 5 sec
 
 
 fillhead.pinch_valve_close vacuum
-#WAIT 10 sec
 fillhead.pinch_valve_close injector
-#WAIT 10 sec
 
-fillhead.vacuum_off 
-fillhead.heater_off
-
-# PURGE ROUTINE, IDK what this is trying to do
-#MOVE_X 400 mm, MOVE_Y 41 mm
-
-#CYCLE 100 times:
-#    INJECTION_VALVE_OPEN
-#	INJECT_STATOR 5 ml 0.2 ml/s
-#	INJECTION_VALVE_CLOSE
-#	WAIT 200 sec
-
-#CYCLE 200 times:
-#    WAIT 1 sec
-#    CYCLE 2 times:
-#        WAIT 1 sec
-
-#WAIT 100 sec
-
-#MACHINE_HOME_MOVE
-#INJECTION_VALVE_HOME_UNTUBED
-#INJECTION_VALVE_CLOSE
-
-#INJECTION_VALVE_OPEN
-
-#MOVE_X 400 mm
 
 
 

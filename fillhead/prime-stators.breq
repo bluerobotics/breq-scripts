@@ -1,0 +1,11 @@
+### Prime Machine for Stators ###
+
+#This takes a while, start early
+fillhead.heater_on 70 C 
+
+fillhead.home 
+
+fillhead.pinch_valve_home vacuum, fillhead.pinch_valve_home injector
+
+fillhead.set_force_zero 
+fillhead.cartridge_home
